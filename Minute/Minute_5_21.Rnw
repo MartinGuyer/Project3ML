@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+Minute May 21\\
+
+Assign group roles:\\
+We didn't do this in class, so I'll just assign them here. Let me know if that works for you.
+\begin{enumerate}
+\item Recorder and Monitor --- Wanli Zhang
+\item Coordinator --- Martin Guyer
+\item Checker --- Shangjia Dong
+\end{enumerate}
+
+\vfill
+
+Today's Discussion
+\begin{enumerate}
+\item \textbf{Question of interest}: Classify whether a mushroom is poisonous or edible based on their physical attributes. Link: https://archive.ics.uci.edu/ml/datasets/Mushroom
+
+\item Martin looked at the data, and discovered that only one variable, called \texttt{stalk-root}, contains missing values. The data description page confirms this: "2480 of them (denoted by "?"), all for attribute #11".
+
+\item Dealing with missing values: 
+\begin{itemize}
+\item[]---Imputation?
+\item[]---Ignore variable "stalk-root"?
+\end{itemize}
+
+\item Ideas on how to proceed: 
+\begin{itemize}
+\item[]---Separate data into training and testing sets. 
+\item[]---Construct classification criterion using the training set, and then verify using the testing set. 
+\item[]---Use misclassification rate as a measure of goodness.
+\end{itemize}
+
+\item To be done by Friday:
+\begin{itemize}
+\item Everybody: Look for available classification methods, and see which ones make the most sense to you, and potentially easy to implement. Also look for R packages available corresponding to your preferred method.
+
+\item Martin: upload a copy of original data set to repo.
+
+\item Wanli: upload group contract to repo.
+\end{enumerate}
+
+
+\end{document}

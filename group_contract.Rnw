@@ -1,0 +1,40 @@
+\documentclass{article}
+
+\title{Group Contract}
+\date{5/21/2014}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\maketitle
+
+We agree that we shall abide by the tenets set forth below.
+
+\subsection*{Stuff We Agreed to Do}
+
+"I commit to a timely response to e-mail discussions, specifically, within 24 hours."
+
+"I will commit to timely progress on individual tasks, and will inform the group if that is not possible, or difficulty arises."
+
+"I will show up to analog meetings on time, and will contact the group if that is not possible."
+
+"I will make every effort to give sufficient warning of an absence so that rescheduling is possible."
+
+"I will speak up if I do not understand a task or am worried it is beyond my capabilities/time."\\
+
+
+
+
+
+\subsection*{Signed}
+\noindent\begin{tabular}{ll}
+\\[4ex]
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Wanli Z. (Recorder \& Monitor) & Date\\[4ex]
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Martin G. (Coordinator) & Date\\[4ex]
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Shangjia D. (Checker) & Date\\
+\end{tabular}
+
+
+\end{document}
