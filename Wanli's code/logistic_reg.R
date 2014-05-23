@@ -1,6 +1,6 @@
 
 ## First attempt to fit a logistic regression
-mushroom = read.csv("MushroomData.txt", header=TRUE)
+mushroom = read.csv("../Data/MushroomData.txt", header=TRUE)
 names(mushroom)
 attach(mushroom)
 
@@ -24,3 +24,36 @@ mod = glm(poison~capShape+capSurface+capColor+bruises+oder+
 ## Got a warning message:
 ## Warning message:
 ## glm.fit: algorithm did not converge 
+
+
+library(dplyr)
+## Look only at subset of data with stalkRoot missing:
+nomiss = filter(mushroom, stalkRoot!="?")
+dim(nomiss) # 2480 obs
+
+mod = glm(poison~capShape+capSurface+capColor+bruises+oder+
+    gillAttach+gillSpace+gillSize+gillColor+stalkShape+
+    stalkRoot+stalkSurfaceAbove+stalkSurfaceBelow+stalkColorAbove+
+    stalkColorBelow+veilColor+ringNumber+ringType+
+    sporeColor+population+habitat ,data=nomiss, family=binomial(link="logit"))
+
+## Still did not converge
+
+## Guess we can use the Hamming distance as distance measure, and obtain
+## a distance/similarity matrix as input to classification algorithms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 ### Is "stalkRoot" missing at random?
 library(dplyr)
 
-mushroom = read.csv("MushroomData.txt", header=TRUE)
+mushroom = read.csv("../Data/MushroomData.txt", header=TRUE)
 names(mushroom)
 
 ## Look only at subset of data with stalkRoot missing:
@@ -34,5 +34,6 @@ for(j in 1:23){
 ## So, it's not missing completely at random (MCAR).
 ## But it might be missing at random. (MCR)
 
-
+## Charlotte suggests that we could treat the "missing" group as a new level for
+## that variable.
 
