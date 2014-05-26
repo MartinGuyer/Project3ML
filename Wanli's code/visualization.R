@@ -68,7 +68,7 @@ perf <- performance(pred,'tpr','fpr')
 
 
 
-png("Plot7.png", height = 400, width = 600, units = 'px', res=300)
+#png("Plot7.png", height = 400, width = 600, units = 'px', res=300)
 
 par(mfrow=c(2,2))
 plot(perf, colorize=T,lwd=1,main='ROC curves from 6-fold cross-validation',colorkey.pos="right")
@@ -77,7 +77,7 @@ plot(perf, avg='horizontal', spread.estimate='boxplot',lwd=3,main='Horizontal av
 plot(perf, avg='threshold', spread.estimate='stddev',lwd=2, main='Threshold averaging + 1 standard deviation',colorize=T)
 par(mfrow=c(1,1))
 
-dev.off()
+#dev.off()
 
 
 
