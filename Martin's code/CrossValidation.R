@@ -42,11 +42,11 @@ pred5 = predict(mod5, mushroom[(4*size+1):(5*size),], type="raw")
 Run5_Pred=pred5[,1]
 Run5_Label=mushroom[(4*size+1):(5*size), 1]
 
-#Run 5: with the fifth 1354 observations as the test set
+#Run 6: with the fifth 1354 observations as the test set
 ##########################################################
 mod6= naiveBayes(poison~., data=mushroom[1:(5*size),])
 pred6 = predict(mod6, mushroom[(5*size+1):(6*size),], type="raw")
-Run6_Pred=pred5[,1]
+Run6_Pred=pred6[,1]
 Run6_Label=mushroom[(5*size+1):(6*size), 1]
 
 #Combining the Data Set
@@ -57,5 +57,5 @@ MushRoom_CrossValid = cbind(Run1_Pred, Run1_Label, Run2_Pred, Run2_Label, Run3_P
 
 #Making the Data Set into a File
 #################################
-write.table(MushRoom_CrossValid, file="Data/CrossValidData.txt", sep=",", 
+write.table(MushRoom_CrossValid, file="../Data/CrossValidData.txt", sep=",", 
             row.names=FALSE)
