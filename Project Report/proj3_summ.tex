@@ -11,8 +11,50 @@
 \usepackage{multicol}
 
 
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+\centering % Center all text
+\vspace*{\baselineskip} % White space at the top of the page
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+
+{\LARGE Leaflets Three, Let it be?\\\vspace*{3mm}
+---Mushroom Edibility Classification}\\[0.2\baselineskip] % Title
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+
+\vspace*{2cm}
+
+{\large ST 599 Big Data} \\ % Tagline(s) or further description
+{\large Project 3} \\[\baselineskip] % description
+
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+Edited by \\[\baselineskip]
+{\Large Shangjia Dong \\ Martin Guyer \\ Wanli Zhang\par} % Editor list
+
+
+\vfill % Whitespace between editor names and publisher logo
+
+\endgroup}
+
+
+
+
+
 \begin{document}
 
+\pagestyle{empty} % Removes page numbers
+
+\titleGP % This command includes the title page
+
+\pagebreak
 
 \pagenumbering{gobble}
 
@@ -101,7 +143,7 @@ Therefore, on average, with our choice of threshold, the naive Bayes classifier 
 \subsection{Assumptions}
 As we mentioned in Section 2, the main assumption of naive Bayes is independence between features given class labels. Although this assumption is unrealistic in practice, it has been shown that naive Bayes may still have high accuracy on datasets in which strong dependencies exist among attributes (Zhang, 2004). The reason behind the classifier's robustness remains an open question.
 \subsection{Scaling to Big Data}
-The dataset we worked with contains 8124 observations and 22 independent variables. The actual running time of the six-fold cross validation is 6.13 seconds, and we expect this time to increase at least linearly with sample size. Suppose a new categorical variable with $k$ levels is added, then if we assume a multinomial distribution, an extra $k-1$ parameters need to be estimated. 
+The dataset we worked with contains 8124 observations and 22 independent variables. The actual running time of the six-fold cross validation is 6.13 seconds, and we expect this time to increase at least linearly with sample size of the validation set. Suppose a new categorical variable with $k$ levels is added, then if we assume a multinomial distribution, an extra $k-1$ parameters need to be estimated. 
 
 
 
