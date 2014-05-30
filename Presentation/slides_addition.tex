@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url,graphicx,tabularx,array}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\setcounter{secnumdepth}{5}
+%\usepackage{fullpage}
+\usepackage[margin=1in]{geometry}
+\usepackage{multicol}
+
+
+\begin{document}
+
+
+\pagenumbering{gobble}
+
+Things to put in slides besides what's in the report:
+\begin{enumerate}
+\item R package used: \texttt{e1071} library \texttt{naiveBayes} plus \texttt{predict} function; \texttt{ROCR} library \texttt{pred} and \texttt{performance} functions
+\item ROC plot for each run of CV
+\item False negative rate and APER for several choices of threshold
+\item Comparison of results and running time if we use small training set and large validation set
+\item Obstacles:
+\begin{enumerate}
+\item Which classification method should we use?
+\item Tried logistic regression: didn't work because iterative algorithm didn't converge
+\item K-nearest neighbours: didn't work because \texttt{knn} doesn't take distance matrix as input, instead, it calculates a Euclidean distance matrix automatically
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
